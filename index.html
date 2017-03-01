@@ -1,14 +1,12 @@
-<html>
+<html ng-app="app">
   <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
   </head>
   <body>
-    <div ng-app="app">
-      <div ng-controller="Controller">
-        <div class="container">
-          <input ng-model="greeting"></input>
-          <h1>{{greeting}}</h1>
-        </div>
+    <div ng-controller="Controller">
+      <div class="container">
+        <input ng-model="greeting"></input>
+        <h1>{{greeting}}</h1>
       </div>
     </div>
     <script src="js/angular.min.js"></script>
