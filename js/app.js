@@ -18,6 +18,7 @@ function todoController($scope) {
       return labels.indexOf(label) === index && label.trim() !== '';
     });
     $scope.newTodo.labels = uniqueLabels;
+    $scope.newTodo.upvotes = 0;
     $scope.todos.unshift($scope.newTodo);
     $scope.newTodo = generateBlankTodo();
     saveTodosToStorage();
@@ -34,6 +35,14 @@ function todoController($scope) {
     saveTodosToStorage();
   }
 
+  $scope.incrementUpvotes = function(todo) {
+    todo.upvotes += 1;
+  }
+
+  $scope.decrementUpvotes = function(todo) {
+    todo.upvotes -= 1;
+  }
+
   function loadTodosFromStorage() {
     var todosFromStorage = localStorage.getItem('todos');
     if (todosFromStorage) {
@@ -48,6 +57,8 @@ function todoController($scope) {
   }
 
   function generateBlankTodo() {
-    return { text: '', isDone: false, labels: '' };
+    return { text: '', isDone: false, labels: '', upvotes:0 };
   }
+
+
 }
