@@ -1,0 +1,23 @@
+.container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.label-list {
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+.label-list-item {
+  margin-right: 7px;
+}
+
+.list-group-item {
+    padding-bottom: 15px;
+}
+
+.is-done {
+  color: lightgray;
+  text-decoration: line-through;
+}
