@@ -34,14 +34,6 @@ function todoController($scope) {
     saveTodosToStorage();
   }
 
-  $scope.calculateOutstanding = function () {
-    var outstanding = $scope.todos.filter(function (todo) {
-      return !todo.isDone;
-    });
-    $scope.outstanding = outstanding.length;
-    return outstanding;
-  }
-
   function loadTodosFromStorage() {
     var todosFromStorage = localStorage.getItem('todos');
     if (todosFromStorage) {
