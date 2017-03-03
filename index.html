@@ -48,14 +48,14 @@
       <button class="btn btn-default" ng-click="addTodo()">Add todo</button>
       <hr />
       <div class="list-group">
-        <span href="#" class="list-group-item" ng-repeat="todo in todos| orderBy: '-upvotes'" >
+        <span href="#" class="list-group-item" ng-repeat="todo in todos| orderBy: '-upvotes' track by $index" >
           <h4 class="list-group-item-heading" ng-class="todo.isDone && 'is-done'">
             {{todo.text}}
           </h4>
           <p class="list-group-item-text label-list">
             <span
               class="label label-default label-list-item"
-              ng-repeat="label in todo.labels track by $index">{{label}}</span>
+              ng-repeat="label in todo.labels ">{{label}}</span>
           </p>
           <button 
             class="btn btn-xs btn-success"
